@@ -9,7 +9,7 @@ function Icon({name, size=20, ...props}) {
     diagonal: <><path d="M6 18 18 6M6 6h12v12"/></>,
     pin: <><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></>,
     instagram: <><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></>,
-    whatsapp: <><path d="M20 11.6a8 8 0 0 1-11.7 7.1L3 20l1.3-5.1A8 8 0 1 1 20 11.6Z"/><path d="M8.3 7.5c-.8 1.8.8 5 3.7 6.5 1.8 1 2.6.6 3.2-.7l-2-1.2-.9.8a7 7 0 0 1-2.8-2.8l.6-.9-1-1.7Z"/></>,
+    whatsapp: <g fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.876.52 3.632 1.42 5.13L2 22l4.994-1.396A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.148a8.13 8.13 0 01-4.144-1.132l-.297-.176-3.033.849.826-3.02-.194-.31A8.14 8.14 0 013.85 12C3.85 7.502 7.502 3.85 12 3.85c4.498 0 8.15 3.652 8.15 8.15 0 4.499-3.652 8.148-8.149 8.148z"/></g>,
     check: <path d="m5 12 4 4L19 6"/>,
     photo: <><rect x="3" y="5" width="18" height="15" rx="3"/><path d="m3 16 5-5 5 5 3-3 5 5"/><circle cx="16" cy="9" r="1"/></>,
     send: <><path d="m21 3-7 18-4-7-7-4 18-7ZM10 14 21 3"/></>,
@@ -19,6 +19,17 @@ function Icon({name, size=20, ...props}) {
     close: <path d="m6 6 12 12M6 18 18 6"/>
   };
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{paths[name] || paths.arrow}</svg>;
+}
+function InstagramLogo({size=24, id='ig'}) {
+  return <svg width={size} height={size} viewBox="0 0 48 48" role="img" aria-label="Instagram">
+    <defs><radialGradient id={id} cx="30%" cy="107%" r="150%">
+      <stop offset="0%" stopColor="#fdf497"/><stop offset="5%" stopColor="#fdf497"/><stop offset="45%" stopColor="#fd5949"/><stop offset="60%" stopColor="#d6249f"/><stop offset="90%" stopColor="#285AEB"/>
+    </radialGradient></defs>
+    <rect width="48" height="48" rx="13" fill={`url(#${id})`}/>
+    <rect x="12.5" y="12.5" width="23" height="23" rx="6.5" fill="none" stroke="#fff" strokeWidth="2.4"/>
+    <circle cx="24" cy="24" r="6" fill="none" stroke="#fff" strokeWidth="2.4"/>
+    <circle cx="32.4" cy="15.6" r="1.7" fill="#fff"/>
+  </svg>;
 }
 function Brand() {return <a className="brand" href="#top" aria-label="Колесо Шымкент — в начало"><img src="assets/favicon.svg" alt="" width="40" height="40"/><span>koleso<span className="brand-dot">.</span><small>SHYMKENT</small></span></a>}
 function External({href, children, ...props}) {return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>}
@@ -62,7 +73,7 @@ function App() {
             <GlassSurface width="auto" height="auto" borderRadius={22} distortionScale={-65} greenOffset={4} blueOffset={8} backgroundOpacity={.78} saturation={1.15} className="hero-action-glass">
               <div className="hero-action"><span className="hero-action-caption">Хорошему авто — хорошего владельца</span><WhatsApp/><span className="microcopy">Условия и стоимость — в WhatsApp</span></div>
             </GlassSurface>
-            <a href="#community" className="audience-card"><span className="audience-icon"><Icon name="instagram" size={23}/></span><div><strong>{config.followers}</strong><span>подписчиков в Instagram</span></div><Icon name="diagonal" size={21}/></a>
+            <a href="#community" className="audience-card"><span className="audience-icon"><InstagramLogo size={45} id="ig-audience"/></span><div><strong>{config.followers}</strong><span>подписчиков в Instagram</span></div><Icon name="diagonal" size={21}/></a>
           </div>
         </div>
         <div className="hero-footnote"><span>Автомобили меняются. Любовь к ним остаётся.</span><span>Листайте, познакомимся ближе <span aria-hidden="true">↓</span></span></div>
@@ -84,7 +95,7 @@ function App() {
       <section className="community-section" id="community"><div className="container community-grid">
         <div className="editorial-photo"><img src="assets/interior.webp" alt="Детали автомобильного салона с кожаной отделкой в тёплых тонах" width="1536" height="1024" loading="lazy"/><span className="editorial-caption">У каждого авто — своя история.</span><span className="editorial-number">02 / ДЕТАЛИ РЕШАЮТ</span></div>
         <div className="community-copy"><span className="eyebrow">02 / МЕСТО ВСТРЕЧИ — INSTAGRAM</span><h2>Ваша следующая<br/>встреча —<br/><span className="muted-heading">в нашей ленте.</span></h2><p>Автомобили Шымкента и люди, которые их ищут. Посмотрите объявления, познакомьтесь со страницей и представьте здесь своё авто.</p>
-          <div className="profile-row"><span className="instagram-badge"><Icon name="instagram" size={25}/></span><div><strong>@{config.handle}</strong><span>{config.followers} подписчиков</span></div></div>
+          <div className="profile-row"><span className="instagram-badge"><InstagramLogo size={48} id="ig-profile"/></span><div><strong>@{config.handle}</strong><span>{config.followers} подписчиков</span></div></div>
           <External href={config.instagram} className="button button-outline">Смотреть объявления <Icon name="diagonal"/></External>
           <p className="community-note">Актуальные автомобили и цены — в Instagram.</p>
         </div>
@@ -102,7 +113,7 @@ function App() {
       <section className="contact-section container" id="contact"><div className="contact-card"><div className="contact-orbit" aria-hidden="true"/><div><span className="eyebrow"><span className="status-dot"/> ВАШ НОВЫЙ МАРШРУТ НАЧИНАЕТСЯ ЗДЕСЬ</span><h2>Пора двигаться<br/>к новому<span>↗</span></h2><p>А продажу начнём с простого «Здравствуйте».</p></div><div className="contact-action"><WhatsApp>Написать в WhatsApp</WhatsApp><a href={'tel:+'+config.whatsapp}>{config.phone}</a></div></div></section>
     </main>
     <footer className="container footer"><div className="footer-top"><Brand/><p>Соединяем людей.<br/>Помогаем продавать автомобили.</p><External href={config.instagram}>Instagram <Icon name="diagonal" size={16}/></External><External href={whatsappUrl}>WhatsApp <Icon name="diagonal" size={16}/></External><a className="back-top" href="#top" aria-label="Вернуться наверх">↑</a></div>
-      <details className="requisites"><summary>Реквизиты / о компании / контакты<span className="faq-plus"><Icon name="plus" size={18}/></span></summary>
+      <div className="requisites"><h3 className="requisites-title">Реквизиты / о компании / контакты</h3>
         <div className="requisites-grid">
           <div><span>Название ИП</span><strong>{config.requisites.name}</strong></div>
           <div><span>БИН/ИИН</span><strong>{config.requisites.bin}</strong></div>
@@ -111,7 +122,7 @@ function App() {
           <div><span>Email</span><a href={'mailto:'+config.requisites.email}>{config.requisites.email}</a></div>
           <div><span>Вид деятельности</span><strong>{config.requisites.activity}</strong></div>
         </div>
-      </details>
+      </div>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} Колесо Шымкент</span><span>Фотографии — иллюстрации. Объявления — в Instagram.</span><span>С любовью к авто и нашему городу.</span></div></footer>
     <div className="mobile-bottom"><WhatsApp>Продать мой автомобиль</WhatsApp></div>
   </>;
