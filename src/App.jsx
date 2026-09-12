@@ -101,7 +101,18 @@ function App() {
       </section>
       <section className="contact-section container" id="contact"><div className="contact-card"><div className="contact-orbit" aria-hidden="true"/><div><span className="eyebrow"><span className="status-dot"/> ВАШ НОВЫЙ МАРШРУТ НАЧИНАЕТСЯ ЗДЕСЬ</span><h2>Пора двигаться<br/>к новому<span>↗</span></h2><p>А продажу начнём с простого «Здравствуйте».</p></div><div className="contact-action"><WhatsApp>Написать в WhatsApp</WhatsApp><a href={'tel:+'+config.whatsapp}>{config.phone}</a></div></div></section>
     </main>
-    <footer className="container footer"><div className="footer-top"><Brand/><p>Соединяем людей.<br/>Помогаем продавать автомобили.</p><External href={config.instagram}>Instagram <Icon name="diagonal" size={16}/></External><External href={whatsappUrl}>WhatsApp <Icon name="diagonal" size={16}/></External><a className="back-top" href="#top" aria-label="Вернуться наверх">↑</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Колесо Шымкент</span><span>Фотографии — иллюстрации. Объявления — в Instagram.</span><span>С любовью к авто и нашему городу.</span></div></footer>
+    <footer className="container footer"><div className="footer-top"><Brand/><p>Соединяем людей.<br/>Помогаем продавать автомобили.</p><External href={config.instagram}>Instagram <Icon name="diagonal" size={16}/></External><External href={whatsappUrl}>WhatsApp <Icon name="diagonal" size={16}/></External><a className="back-top" href="#top" aria-label="Вернуться наверх">↑</a></div>
+      <details className="requisites"><summary>Реквизиты / о компании / контакты<span className="faq-plus"><Icon name="plus" size={18}/></span></summary>
+        <div className="requisites-grid">
+          <div><span>Название ИП</span><strong>{config.requisites.name}</strong></div>
+          <div><span>БИН/ИИН</span><strong>{config.requisites.bin}</strong></div>
+          <div><span>Юридический адрес</span><strong>{config.requisites.address}</strong></div>
+          <div><span>Телефон</span><a href={'tel:'+config.requisites.phoneHref}>{config.requisites.phone}</a></div>
+          <div><span>Email</span><a href={'mailto:'+config.requisites.email}>{config.requisites.email}</a></div>
+          <div><span>Вид деятельности</span><strong>{config.requisites.activity}</strong></div>
+        </div>
+      </details>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} Колесо Шымкент</span><span>Фотографии — иллюстрации. Объявления — в Instagram.</span><span>С любовью к авто и нашему городу.</span></div></footer>
     <div className="mobile-bottom"><WhatsApp>Продать мой автомобиль</WhatsApp></div>
   </>;
 }

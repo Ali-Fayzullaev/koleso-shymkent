@@ -6,6 +6,15 @@ export const config = {
   handle: 'koleso.shymkent.kz',
   followers: '69,6 тыс.',
   posts: '9 022',
-  years: '5+'
+  years: '5+',
+  requisites: {
+    name: 'ИП Октамов',
+    bin: '890705302756',
+    address: 'обл. Туркестанская, р-он Сайрамский, с. Аксу, 160800',
+    phone: '+7 707 355 6754',
+    phoneHref: '+77073556754',
+    email: 'oktamovmurat132@gmail.com',
+    activity: 'ОКЭД 47910 — розничная торговля путём заказа товаров по почте или через сеть Интернет'
+  }
 };
 export const whatsappUrl = 'https://wa.me/' + config.whatsapp + '?text=' + encodeURIComponent(config.message);
