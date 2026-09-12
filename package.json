@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "esbuild src/App.jsx --bundle --minify --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=script.js",
+    "build": "esbuild src/App.jsx --bundle --minify --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=script.js && node tools/sync-publish.cjs",
     "preview": "node tools/serve.cjs",
     "check": "node tools/check.cjs"
   },
