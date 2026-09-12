@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Автопродажа Шымкент — продайте авто быстро</title>
+<meta name="description" content="Продайте свой автомобиль быстро и выгодно в Шымкенте. Качественная реклама для 69 600+ подписчиков. Более 5 лет на рынке.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ====== EDITABLE CONFIG ======
+  Отредактируйте эти значения — они используются во всех кнопках и ссылках на странице.
+  whatsapp: номер без +, без пробелов
+  instagram: полная ссылка на профиль
+-->
+<script>
+  window.SITE_CONFIG = {
+    whatsapp: "77471440100",
+    whatsappMessage: "Здравствуйте! Хочу продать свой автомобиль. Расскажите, пожалуйста, про размещение рекламы.",
+    instagram: "https://instagram.com/", // TODO: вставьте вашу настоящую ссылку на Instagram
+    phoneDisplay: "+7 747 144 01 00",
+    followers: "69.6K",
+    posts: "9 022",
+    years: "5+"
+  };
+</script>
+
+<!-- Reusable icon defs, referenced via <use> to keep markup clean -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="icon-car" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 11l1.4-4.2A2 2 0 0 1 8.3 5.5h7.4a2 2 0 0 1 1.9 1.3L19 11"/>
+      <rect x="3" y="11" width="18" height="6.5" rx="2.2"/>
+      <circle cx="7.5" cy="17.5" r="1.6" fill="currentColor" stroke="none"/>
+      <circle cx="16.5" cy="17.5" r="1.6" fill="currentColor" stroke="none"/>
+    </g>
+    <g id="icon-pin" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 10c0 5.5-7 11-7 11s-7-5.5-7-11a7 7 0 0 1 14 0Z"/>
+      <circle cx="12" cy="10" r="2.6"/>
+    </g>
+    <g id="icon-users" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15.5 20v-1.7a3.6 3.6 0 0 0-3.6-3.6H6.6A3.6 3.6 0 0 0 3 18.3V20"/>
+      <circle cx="9.1" cy="7.6" r="3.4"/>
+      <path d="M21 20v-1.7a3.6 3.6 0 0 0-2.7-3.48"/>
+      <path d="M14.9 4.2a3.4 3.4 0 0 1 0 6.8"/>
+    </g>
+    <g id="icon-award" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8.2" r="5.2"/>
+      <path d="M14.9 12.9 16.4 21l-4.4-2.6L7.6 21l1.5-8.1"/>
+    </g>
+    <g id="icon-tag" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.6 3.5H6.2a2 2 0 0 0-2 2v6.4c0 .5.2 1 .6 1.4l9.1 9.1c.8.8 2 .8 2.8 0l6-6c.8-.8.8-2 0-2.8L13.6 4.1c-.4-.4-.9-.6-1.4-.6Z"/>
+      <circle cx="8.3" cy="8.3" r="1.4" fill="currentColor" stroke="none"/>
+    </g>
+    <g id="icon-zap" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.5 2.5 4 14h6.5l-1 7.5L20 10h-6.5l-1-7.5Z"/>
+    </g>
+    <g id="icon-arrow-right" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 12h15"/>
+      <path d="M13 5.5 19.5 12 13 18.5"/>
+    </g>
+    <g id="icon-star" fill="currentColor">
+      <path d="M12 2.5 14.7 9.1 21.8 9.6 16.3 14.1 18.1 21 12 17.1 5.9 21 7.7 14.1 2.2 9.6 9.3 9.1 12 2.5Z"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-badge"><svg width="20" height="20"><use href="#icon-car"/></svg></span>
+      <div class="logo-text">
+        <strong>Автопродажа</strong>
+        <span>Шымкент</span>
+      </div>
+    </div>
+    <a href="#" class="btn btn-whatsapp btn-header" data-whatsapp>
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.876.52 3.632 1.42 5.13L2 22l4.994-1.396A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.148a8.13 8.13 0 01-4.144-1.132l-.297-.176-3.033.849.826-3.02-.194-.31A8.14 8.14 0 013.85 12C3.85 7.502 7.502 3.85 12 3.85c4.498 0 8.15 3.652 8.15 8.15 0 4.499-3.652 8.148-8.149 8.148z"/></svg>
+      <span>Написать</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content" data-reveal>
+        <div class="badge glass">
+          <svg width="14" height="14"><use href="#icon-pin"/></svg>
+          <span>Шымкент · на рынке <span data-years>5+</span> лет</span>
+        </div>
+        <h1>Продайте авто <span class="accent">быстро и&nbsp;выгодно</span> в Шымкенте</h1>
+        <p class="hero-text">
+          Разместим объявление о вашем авто для <strong><span data-followers>69.6K</span>+ подписчиков</strong> нашей страницы.
+          Качественная реклама, недорогие тарифы, реальные покупатели каждый день.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.876.52 3.632 1.42 5.13L2 22l4.994-1.396A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.148a8.13 8.13 0 01-4.144-1.132l-.297-.176-3.033.849.826-3.02-.194-.31A8.14 8.14 0 013.85 12C3.85 7.502 7.502 3.85 12 3.85c4.498 0 8.15 3.652 8.15 8.15 0 4.499-3.652 8.148-8.149 8.148z"/></svg>
+            <span>Написать в WhatsApp</span>
+          </a>
+          <a href="#" class="btn btn-glass btn-lg" data-instagram target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465a4.9 4.9 0 011.772 1.153 4.9 4.9 0 011.153 1.772c.248.637.415 1.363.465 2.428.05 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.217 1.79-.465 2.428a4.9 4.9 0 01-1.153 1.772 4.9 4.9 0 01-1.772 1.153c-.637.248-1.363.415-2.428.465-1.066.05-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.217-2.428-.465a4.9 4.9 0 01-1.772-1.153 4.9 4.9 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.01 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428A4.9 4.9 0 013.678 3.678 4.9 4.9 0 015.45 2.525c.637-.248 1.363-.415 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.467.182-.8.399-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.05 1.055-.06 1.37-.06 4.04 0 2.67.01 2.986.06 4.04.045.976.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.05 1.37.06 4.041.06 2.67 0 2.987-.01 4.04-.06.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.05-1.055.06-1.37.06-4.041 0-2.67-.01-2.986-.06-4.04-.045-.976-.207-1.505-.344-1.858a3.1 3.1 0 00-.748-1.15 3.1 3.1 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.05-1.37-.06-4.041-.06zm0 4.594a5.604 5.604 0 110 11.208 5.604 5.604 0 010-11.208zM12 16a4 4 0 100-8 4 4 0 000 8zm5.838-9.802a1.309 1.309 0 11-2.618 0 1.309 1.309 0 012.618 0z"/></svg>
+            <span>Наш Instagram</span>
+          </a>
+        </div>
+
+        <div class="hero-stats glass">
+          <div class="stat">
+            <div class="stat-num" data-followers>69.6K</div>
+            <div class="stat-label">подписчиков</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num" data-posts>9 022</div>
+            <div class="stat-label">объявлений</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num" data-years>5+</div>
+            <div class="stat-label">лет на рынке</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true" data-reveal>
+        <div class="visual-ring visual-ring-1"></div>
+        <div class="visual-ring visual-ring-2"></div>
+        <div class="visual-card glass">
+          <svg class="car-icon" width="76" height="76"><use href="#icon-car"/></svg>
+        </div>
+        <div class="visual-chip visual-chip-1 glass">
+          <svg width="13" height="13"><use href="#icon-star"/></svg>
+          <span>Проверенные покупатели</span>
+        </div>
+        <div class="visual-chip visual-chip-2 glass">
+          <svg width="13" height="13"><use href="#icon-zap"/></svg>
+          <span>Быстрая продажа</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Быстрая продажа</span><i></i>
+      <span>Честная цена</span><i></i>
+      <span>69.6K подписчиков</span><i></i>
+      <span>Проверенные покупатели</span><i></i>
+      <span>5+ лет на рынке</span><i></i>
+      <span>Быстрая продажа</span><i></i>
+      <span>Честная цена</span><i></i>
+      <span>69.6K подписчиков</span><i></i>
+      <span>Проверенные покупатели</span><i></i>
+      <span>5+ лет на рынке</span><i></i>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Как это работает</span>
+        <h2>Продать авто — это просто</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step-line" aria-hidden="true"></div>
+        <div class="step glass" data-reveal>
+          <div class="step-num">01</div>
+          <h3>Пишете нам</h3>
+          <p>Отправляете фото и информацию об автомобиле в WhatsApp — марка, год, цена, состояние.</p>
+        </div>
+        <div class="step glass" data-reveal>
+          <div class="step-num">02</div>
+          <h3>Мы публикуем рекламу</h3>
+          <p>Готовим качественное объявление и размещаем на нашей странице для тысяч подписчиков в Шымкенте.</p>
+        </div>
+        <div class="step glass" data-reveal>
+          <div class="step-num">03</div>
+          <h3>Вам звонят покупатели</h3>
+          <p>Заинтересованные покупатели связываются напрямую с вами — быстро и без посредников.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section section-alt" id="why">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Почему мы</span>
+        <h2>Нам доверяют продавцы авто в Шымкенте</h2>
+      </div>
+
+      <div class="features">
+        <div class="feature-card glass" data-reveal>
+          <div class="feature-icon"><svg width="22" height="22"><use href="#icon-users"/></svg></div>
+          <h3>Большая аудитория</h3>
+          <p>69.6К+ подписчиков видят ваше объявление каждый день.</p>
+        </div>
+        <div class="feature-card glass" data-reveal>
+          <div class="feature-icon"><svg width="22" height="22"><use href="#icon-award"/></svg></div>
+          <h3>Опыт 5+ лет</h3>
+          <p>Более 5 лет помогаем продавать автомобили в Шымкенте.</p>
+        </div>
+        <div class="feature-card glass" data-reveal>
+          <div class="feature-icon"><svg width="22" height="22"><use href="#icon-tag"/></svg></div>
+          <h3>Недорогая реклама</h3>
+          <p>Доступные тарифы на платное размещение объявлений.</p>
+        </div>
+        <div class="feature-card glass" data-reveal>
+          <div class="feature-icon"><svg width="22" height="22"><use href="#icon-zap"/></svg></div>
+          <h3>Быстрый отклик</h3>
+          <p>Отвечаем в WhatsApp быстро и помогаем на каждом шаге.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+    <div class="container cta-inner">
+      <div class="cta-card glass" data-reveal>
+        <h2>Готовы продать свой автомобиль?</h2>
+        <p>Напишите нам в WhatsApp прямо сейчас и узнайте стоимость размещения объявления.</p>
+        <a href="#" class="btn btn-whatsapp btn-xl" data-whatsapp>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.876.52 3.632 1.42 5.13L2 22l4.994-1.396A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.148a8.13 8.13 0 01-4.144-1.132l-.297-.176-3.033.849.826-3.02-.194-.31A8.14 8.14 0 013.85 12C3.85 7.502 7.502 3.85 12 3.85c4.498 0 8.15 3.652 8.15 8.15 0 4.499-3.652 8.148-8.149 8.148z"/></svg>
+          <span data-phone-display>+7 747 144 01 00</span>
+        </a>
+        <a href="#" class="cta-instagram-link" data-instagram target="_blank" rel="noopener">
+          <span>Мы также в Instagram</span>
+          <svg width="15" height="15"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="logo">
+      <span class="logo-badge"><svg width="18" height="18"><use href="#icon-car"/></svg></span>
+      <div class="logo-text">
+        <strong>Автопродажа</strong>
+        <span>Шымкент</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#" data-whatsapp>WhatsApp</a>
+      <a href="#" data-instagram target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="footer-copy">© <span data-year></span> Автопродажа Шымкент. koleso.shymkent.kz</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="#" class="fab-whatsapp" data-whatsapp aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.876.52 3.632 1.42 5.13L2 22l4.994-1.396A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.148a8.13 8.13 0 01-4.144-1.132l-.297-.176-3.033.849.826-3.02-.194-.31A8.14 8.14 0 013.85 12C3.85 7.502 7.502 3.85 12 3.85c4.498 0 8.15 3.652 8.15 8.15 0 4.499-3.652 8.148-8.149 8.148z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "report": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/hero.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/interior.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        }
+      ],
+      "glass": "glass-surface glass-surface--svg header-glass"
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/hero.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/interior.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        }
+      ],
+      "glass": "glass-surface glass-surface--svg header-glass"
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/hero.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/interior.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        }
+      ],
+      "glass": "glass-surface glass-surface--svg header-glass"
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/hero.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/interior.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        }
+      ],
+      "glass": "glass-surface glass-surface--svg header-glass"
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": [],
+      "images": [
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        },
+        {
+          "src": "assets/hero.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/interior.webp",
+          "ok": true
+        },
+        {
+          "src": "assets/favicon.svg",
+          "ok": true
+        }
+      ],
+      "glass": "glass-surface glass-surface--svg header-glass"
+    }
+  ],
+  "errors": []
+}

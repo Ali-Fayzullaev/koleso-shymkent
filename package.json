@@ -1,0 +1,19 @@
+{
+  "name": "koleso-shymkent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/App.jsx --bundle --minify --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=script.js",
+    "preview": "node tools/serve.cjs",
+    "check": "node tools/check.cjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "playwright": "^1.58.0",
+    "sharp": "^0.34.0"
+  }
+}
